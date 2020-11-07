@@ -1,10 +1,14 @@
 #define MAX 100
+#include <sstream>
+#include <string>
+using namespace std;
 
 class Heap {
 public:
     Heap();
+    //Heap(istringstream& ss);
     void HeapSort();
-    void add(int newNum);
+    void Add(int newNum);
     bool ParentExists(int index);
     int ParentPos(int index);
     void Swap(int indexA, int indexB);

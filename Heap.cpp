@@ -4,7 +4,24 @@ Heap::Heap() {
     heapSize = 0;
 }
 
-void Heap::add(int newNum) {
+//Heap::Heap(istringstream& ss) {
+//
+//
+//
+//    for (int i = 0; i < arrSize; i++) {
+//            if (numbers[i] == ' ') {
+//                x++;
+//            } else if(numbers[i] == '-' && numbers[i+1] == '9') {
+//                break;
+//            } else {
+//                int num = 0;
+//                num = num * 10 + (numbers[i] - 48);
+//                Add(num);
+//            }
+//        }
+//}
+
+void Heap::Add(int newNum) {
     heapArray[heapSize] = newNum;
     heapSize++;
     HeapSort();

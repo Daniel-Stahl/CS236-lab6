@@ -1,6 +1,5 @@
-#define MAX 100
 #include <string>
-#include <sstream>
+//#include <sstream>
 #include <iostream>
 #include <vector>
 using namespace std;
@@ -14,7 +13,6 @@ public:
     int DeleteMax();
     void Swap(int indexA, int indexB);
     void PrintHeap();
-    void DeleteHeap(Heap* myHeap);
     
 private:
     int heapSize;

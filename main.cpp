@@ -5,16 +5,12 @@ int main() {
     int userChoice;
     int num = 0;
     
-    string input;
     cout << "Enter the positive integers to put in heap, enter -9 to stop.\n";
-
-    getline(cin, input);
-    istringstream userInput(input);
-
-    while (userInput >> num) {
-        if (num != -9) {
-            myHeap.Add(num);
-        }
+    cin >> num;
+    
+    while (num != -9) {
+        myHeap.Add(num);
+        cin >> num;
     }
     
     myHeap.PrintHeap();
@@ -31,18 +27,17 @@ int main() {
                 
             case 2:
                 //Add an item
-                cout << "Add item: ";
+                cout << "\nAdd item: ";
                 cin >> userChoice;
                 
                 myHeap.Add(userChoice);
+                cout << "\n";
                 break;
                 
             case 3:
                 //Remove the largest item
-                cout << "Remove Item: " << myHeap.DeleteMax() << "\n";
+                cout << "\nRemove Item: " << myHeap.DeleteMax() << "\n" << endl;
                 break;
-                
         }
     } while(userChoice != 4);
-    
 }

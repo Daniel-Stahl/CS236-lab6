@@ -71,7 +71,7 @@ int Heap::DeleteMax() {
 }
 
 void Heap::PrintHeap() {
-    cout << "\nThe Heap is:\n";
+    cout << "\nThe Heap is: ";
     for (int i = 1; i <= heapSize; i++) {
         cout << vect[i] << " ";
     }

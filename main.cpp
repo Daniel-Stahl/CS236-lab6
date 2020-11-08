@@ -1,10 +1,7 @@
-#include <iostream>
 #include "Heap.hpp"
 
-void BuildHeap();
-
 int main() {
-    Heap myHeap;
+    Heap* myHeap = new Heap();
     int userChoice;
     int num = 0;
     
@@ -16,7 +13,7 @@ int main() {
 
     while (userInput >> num) {
         if (num != -9) {
-            myHeap.Add(num);
+            myHeap->Add(num);
         }
     }
     
@@ -34,7 +31,7 @@ int main() {
                 cout << "Add item: ";
                 cin >> userChoice;
                 
-                myHeap.Add(userChoice);
+                myHeap->Add(userChoice);
                 break;
                 
             case 3:

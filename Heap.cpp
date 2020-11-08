@@ -38,7 +38,7 @@ void Heap::HeapDown(int x) {
     }
     
     if (tempIndex != x) {
-        Swap(vect[x], vect[tempIndex]);
+        swap(vect[x], vect[tempIndex]);
         HeapDown(tempIndex);
     }
     
@@ -65,14 +65,15 @@ void Heap::Swap(int indexA, int indexB) {
 
 int Heap::DeleteMax() {
     int maxNum = vect[1];
-    Swap(vect[1], vect[heapSize--]);
+    swap(vect[1], vect[heapSize--]);
     HeapDown(1);
     return maxNum;
 }
 
-//void Heap::PrintHeap() {
-//    for (int i = 0; i < heapSize; i++) {
-//        cout << heapArray[i] << " ";
-//    }
-//    cout << "\n";
-//}
+void Heap::PrintHeap() {
+    cout << "\nThe Heap is:\n";
+    for (int i = 1; i <= heapSize; i++) {
+        cout << vect[i] << " ";
+    }
+    cout << "\n" << endl;
+}
